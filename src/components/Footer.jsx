@@ -27,7 +27,7 @@ const Footer = () => {
       <footer>
         <div className="container grid grid-four-column">
           <div className="footer-about">
-            <h3>Thapa Technical</h3>
+            <h3>Kaushik Tapaniya</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
           </div>
 
@@ -56,11 +56,7 @@ const Footer = () => {
                 <FaInstagram className="icons" />
               </div>
               <div>
-                <a
-                  href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-                  target="_blank">
-                  <FaYoutube className="icons" />
-                </a>
+                <FaYoutube className="icons" />
               </div>
             </div>
           </div>
@@ -77,7 +73,7 @@ const Footer = () => {
           <hr />
           <div className="container grid grid-two-column">
             <p>
-              @{new Date().getFullYear()} ThapaTechnical. All Rights Reserved
+              @{new Date().getFullYear()} All Rights Reserved
             </p>
             <div>
               <p>PRIVACY POLICY</p>

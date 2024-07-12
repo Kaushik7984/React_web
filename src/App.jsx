@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './GlobalStyle'
 import Error from './pages/Error'
+import GoToTop from './components/GoToTop'
 
 const App = () => {
 
@@ -38,7 +39,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <BrowserRouter>
-              <Header />
+        <Header />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -48,6 +49,7 @@ const App = () => {
         </Routes>
         <Footer />
       </BrowserRouter>
+      <GoToTop />
     </ThemeProvider>
   )
 }
