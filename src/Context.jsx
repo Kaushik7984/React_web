@@ -1,13 +1,16 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import reducer from './Reducer'
+// import { axios } from 'axios'
 
 const AppContext = createContext();
 
 const initialState = {
     name: " ",
     image: " ",
+    services: [],
 }
 
+const API = "https://jsonplaceholder.typicode.com/posts"
 
 
 const AppProvider = ({ children }) => {
@@ -26,20 +29,39 @@ const AppProvider = ({ children }) => {
             }
         )
     }
-    
+
     const updateAboutPage = () => {
         return dispatch(
             {
                 type: "ABOUT_UPDATE",
                 payload: {
-                    name: "Tapaniya",
+                    name: "Kaushik Tapaniya",
                     image: "./images/about1.svg"
                 },
             }
         )
     }
 
-    
+
+    const getServices = async (url) => {
+        try {
+            // const res = await axios.get(url);
+
+            const res = await fetch(url);
+            const data = await res.json();
+            dispatch({
+                type: "GET_SERVICES", payload: data
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        getServices(API);
+    }, [])
+
+
     return (
         <AppContext.Provider value={{ ...state, updateHomePage, updateAboutPage }}>
             {children}
