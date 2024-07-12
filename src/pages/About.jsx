@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HeroSection from '../components/HeroSection'
+import { useGlobleContext } from '../Context'
 
 const About = () => {
-  const data = {
-    name: "Tapaniya",
-    image: "./images/about1.svg"
-  }
+  const {updateAboutPage} = useGlobleContext()
+
+  useEffect(() =>{ 
+    updateAboutPage();
+   }, [])
+
+
   return (
     <div>
-      <HeroSection  {...data}/>
+      <HeroSection />
     </div>
   )
 }

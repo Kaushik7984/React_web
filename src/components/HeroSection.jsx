@@ -1,9 +1,12 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styleFile/Button";
+import { useGlobleContext } from "../Context";
 
-const HeroSection = ({name, image}) => {
+const HeroSection = () => {
   
+  const {name, image} = useGlobleContext();
+
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
@@ -11,7 +14,7 @@ const HeroSection = ({name, image}) => {
           <p className="hero-top-data">THIS IS ME</p>
           <h1 className="hero-heading">{name}</h1>
           <p className="hero-para">
-            I'm {name}. A Full stack Developer, youtuber and freelancer. A Full
+            I'm {name}. A Frontend Developer, youtuber and freelancer. A Full
             stack Developer, youtuber and freelancer.
           </p>
           <Button className="btn hireme-btn">
