@@ -45,8 +45,10 @@ const Navbar = () => {
     .mobile-navbar-btn[name="close-outline"] {
       display: none;
     }
+    
 
     @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    
       .mobile-navbar-btn {
         display: inline-block;
         z-index: 999;
@@ -60,14 +62,15 @@ const Navbar = () => {
 
       /* hide the original nav menu  */
       .navbar-list {
-        width: 100vw;
-        height: 100vh;
+        height: 833px;
+        // width: 100%;
         position: absolute;
+        padding:0px 10px;
         top: 0;
         left: 0;
-        background-color: #fff;
+        // background-color: rgb(98 84 243 );
 
-        display: flex;
+        display: box;
         justify-content: center;
         align-content: center;
         flex-direction: column;
@@ -109,6 +112,8 @@ const Navbar = () => {
 
       .active .navbar-list {
         visibility: visible;
+         background-color: #fff;
+         width:100%;
         opacity: 1;
         transform: translateX(0);
         z-index: 999;
@@ -118,7 +123,7 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <div className={openMenu ? "menuIcon active" : "menuIcon"}>
+      <div className={openMenu ? "menuIcon active" : "menuIcon"} >
         <ul className="navbar-list">
           <li>
             <NavLink

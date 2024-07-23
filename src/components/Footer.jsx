@@ -148,8 +148,10 @@ const Wrapper = styled.section`
       display: flex;
       justify-content: center;
       align-items: center;
+      padding-left:30px;
 
       .contact-short-btn {
+       
         text-align: center;
         justify-self: flex-start;
       }
