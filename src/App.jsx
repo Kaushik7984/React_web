@@ -16,6 +16,7 @@ const App = () => {
 
   const theme = {
     colors: {
+      
       heading: "rgb(24 24 29)",
       text: "rgb(24 24 29)",
       white: "#fff",
@@ -31,14 +32,15 @@ const App = () => {
       shadow:
         "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
       shadowSupport: " rgba(0, 0, 0, 0.16) 0px 1px 4px",
+    
     },
     media: { mobile: "768px", tab: "998px" },
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} >
       <GlobalStyle />
-      <BrowserRouter>
+      <BrowserRouter >
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />

@@ -6,22 +6,27 @@ export const GlobalStyle = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
+  
  }
 html {
   font-size: 62.5%;
-  /* scroll-behavior: smooth; */
-  /* 1rem = 10px */
-  overflow-x: hidden;
+  scroll-behavior: smooth; 
+  //  1rem = 10px 
+  // overflow-x: hidden;
+  width: 750px;
+
+  
 }
 
 body {
-  overflow-x: hidden;
+  // overflow: hidden;
    scrollbar-color: rgb(98 84 243);
     scrollbar-width: thin;
 }
 
 body::-webkit-scrollbar {
   width: 1.5rem;
+
 }
 
 body::-webkit-scrollbar-track {
